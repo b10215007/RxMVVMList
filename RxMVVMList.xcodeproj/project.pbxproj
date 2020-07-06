@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		2C8C932624B32A1100DA099F /* ListDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C932524B32A1100DA099F /* ListDetailModel.swift */; };
 		2C8C932824B32A2000DA099F /* ListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C932724B32A2000DA099F /* ListDetailViewModel.swift */; };
 		2C8C932A24B32A2B00DA099F /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C932924B32A2B00DA099F /* ListDetailViewController.swift */; };
+		2C8C932C24B3880400DA099F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C932B24B3880300DA099F /* NetworkManager.swift */; };
+		2C8C932E24B3880A00DA099F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C932D24B3880A00DA099F /* Network.swift */; };
 		9F9F02DAEEB3C9B4A52BC464 /* Pods_RxMVVMListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC7A32BA8828FEB1B4871D2 /* Pods_RxMVVMListUITests.framework */; };
 		DE657952D522EF9C159DC69F /* Pods_RxMVVMList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E090DAF34A7D11AE02AF189 /* Pods_RxMVVMList.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		2C8C932524B32A1100DA099F /* ListDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailModel.swift; sourceTree = "<group>"; };
 		2C8C932724B32A2000DA099F /* ListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewModel.swift; sourceTree = "<group>"; };
 		2C8C932924B32A2B00DA099F /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		2C8C932B24B3880300DA099F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2C8C932D24B3880A00DA099F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		79D2FB28FCD14F2775644B26 /* Pods_RxMVVMListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC7A32BA8828FEB1B4871D2 /* Pods_RxMVVMListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC1BB3FA9D4E5AAADDBAA65 /* Pods-RxMVVMListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMListUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVMListUITests/Pods-RxMVVMListUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 		2C8C931324B3295F00DA099F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2C8C932B24B3880300DA099F /* NetworkManager.swift */,
+				2C8C932D24B3880A00DA099F /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -277,7 +283,6 @@
 				9CC1BB3FA9D4E5AAADDBAA65 /* Pods-RxMVVMListUITests.debug.xcconfig */,
 				FFE1D6D7534A30C3F745778F /* Pods-RxMVVMListUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -514,8 +519,10 @@
 			files = (
 				2C8C92E424B3295500DA099F /* AppDelegate.swift in Sources */,
 				2C8C92E624B3295500DA099F /* SceneDelegate.swift in Sources */,
+				2C8C932C24B3880400DA099F /* NetworkManager.swift in Sources */,
 				2C8C931724B3297C00DA099F /* ListViewModel.swift in Sources */,
 				2C8C932624B32A1100DA099F /* ListDetailModel.swift in Sources */,
+				2C8C932E24B3880A00DA099F /* Network.swift in Sources */,
 				2C8C931E24B329A300DA099F /* ListModel.swift in Sources */,
 				2C8C931924B3298300DA099F /* ListViewController.swift in Sources */,
 				2C8C932A24B32A2B00DA099F /* ListDetailViewController.swift in Sources */,

@@ -6,4 +6,8 @@
 //  Copyright © 2020 25sprout. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ListViewController: UIViewController {
+    
+}
