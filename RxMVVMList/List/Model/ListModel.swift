@@ -41,7 +41,7 @@ struct ListModel: Decodable {
     let following: Int
     let created_at: String
     let updated_at: String
-    let plan: LisPlanObject
+    let plan: ListPlanObject
 }
 
 struct ListPlanObject: Decodable {

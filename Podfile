@@ -7,9 +7,12 @@ target 'RxMVVMList' do
 
   # Pods for RxMVVMList
   pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   pod 'RxSwift'
   pod 'RxCocoa'
+
+  pod 'SDWebImage'
 
   target 'RxMVVMListTests' do
     inherit! :search_paths

@@ -42,17 +42,23 @@ extension UserRouter: RouterType {
     var param: [String : Any]? {
         return nil
     }
-    
-    
 }
 
 class ListViewModel {
     
     let service = NetworkManager<UserRouter>()
     
-    var users = PublisheRelay<[ListModel]>()
+    var users = PublishRelay<[ListUserModel]>()
     
     func getUsers() {
+        let completion: ([ListUserModel]?, String?, Error?, Bool) -> Void = { data, msg, error, success in
+            if let data = data, success {
+                self.users.accept(data)
+            } else {
+                print(error)
+            }
+        }
         
+        service.requestData(.users, completion: completion)
     }
 }
