@@ -16,16 +16,21 @@ class ListDetailTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    private lazy var label: UILabel = {
-        let label = UILabel()
+    private lazy var textView: UITextView = {
+        let textView = UITextView()
+        textView.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        textView.dataDetectorTypes = .link
+        textView.isEditable = false
+        textView.isScrollEnabled = false
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        return textView
     }()
     
     func setup(icon: UIImage, text: String) {
         iconImageView.image = icon
-        label.text = text
+        textView.text = text
+//        if text.find
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -38,7 +43,7 @@ class ListDetailTableViewCell: UITableViewCell {
     }
     
     private func configureCell() {
-        self.addSubviews([iconImageView, label])
+        self.addSubviews([iconImageView, textView])
         
         NSLayoutConstraint.activate([
             iconImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
@@ -46,8 +51,8 @@ class ListDetailTableViewCell: UITableViewCell {
             iconImageView.heightAnchor.constraint(equalToConstant: 50),
             iconImageView.widthAnchor.constraint(equalToConstant: 50),
             
-            label.leftAnchor.constraint(equalTo: iconImageView.rightAnchor, constant: 8),
-            label.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            textView.leftAnchor.constraint(equalTo: iconImageView.rightAnchor, constant: 8),
+            textView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ])
     }
 }

@@ -104,11 +104,16 @@ class ListDetailViewController: UIViewController {
         }.disposed(by: disposeBag)
      
         self.viewModel.detail.map({
-            return [$0.login, $0.location, $0.email, $0.blog, "Admin: \($0.site_admin)", "Company: \($0.company)"]
+            return ["Login: \($0.login)",
+                    "Location: \($0.location ?? "-")",
+                    "Email: \($0.email ?? "-")",
+                    "User Blog: \($0.blog)",
+                    "Admin: \($0.site_admin)",
+                    "Company: \($0.company ?? "-")"]
         }).bind(to: tableView.rx.items) { (tableView, row, model) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: ListDetailTableViewCell.cellIdentifier, for: IndexPath(row: row, section: 0)) as! ListDetailTableViewCell
             
-            cell.setup(icon: UIImage.imageWithColor(.blue), text: model ?? "-")
+            cell.setup(icon: UIImage.imageWithColor(.blue), text: model)
                 return cell
         }.disposed(by: disposeBag)
     }

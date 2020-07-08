@@ -38,6 +38,7 @@ class ListUserTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    var typeWidthConstraint: NSLayoutConstraint!
     
     func setup(_ model: ListUserModel) {
         avatarImageView.sd_setImage(with: URL(string: model.avatar_url),
@@ -46,6 +47,9 @@ class ListUserTableViewCell: UITableViewCell {
                                     completed: nil)
         nameLabel.text = model.login
         typeLabel.text = model.type
+        typeWidthConstraint.constant = model.type.count < 7 ? 72 : 112
+//        typeLabel.text = model.site_admin ? "STAFF" : ""
+//        typeLabel.isHidden = !model.site_admin
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -60,6 +64,7 @@ class ListUserTableViewCell: UITableViewCell {
     private func configureCell() {
         self.addSubviews([avatarImageView, nameLabel, typeLabel])
         
+        typeWidthConstraint = typeLabel.widthAnchor.constraint(equalToConstant: 72)
         NSLayoutConstraint.activate([
             avatarImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             avatarImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15),
@@ -71,7 +76,7 @@ class ListUserTableViewCell: UITableViewCell {
             
             typeLabel.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor),
             typeLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: 8),
-            typeLabel.widthAnchor.constraint(equalToConstant: 72)
+            typeWidthConstraint
         ])
     }
 }

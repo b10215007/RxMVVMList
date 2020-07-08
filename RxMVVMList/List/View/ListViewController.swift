@@ -50,7 +50,9 @@ class ListViewController: UIViewController {
     
     private func setupBinding() {
         self.viewModel
-            .users.bind(to: tableView.rx.items) { (tableView, row, model) in
+            .users
+            .take(100)
+            .bind(to: tableView.rx.items) { (tableView, row, model) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: ListUserTableViewCell.cellIdentifier, for: IndexPath(row: row, section: 0)) as! ListUserTableViewCell
                 
                 cell.setup(model)

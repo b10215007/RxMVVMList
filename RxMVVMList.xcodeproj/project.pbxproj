@@ -143,10 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				2C8C932424B329FE00DA099F /* Extensions */,
-				2C8C932324B329F700DA099F /* Helper */,
 				2C8C931F24B329D000DA099F /* Detail */,
 				2C8C931524B3296F00DA099F /* List */,
-				2C8C931424B3296500DA099F /* Cell */,
 				2C8C931324B3295F00DA099F /* Network */,
 				2C8C92E324B3295500DA099F /* AppDelegate.swift */,
 				2C8C92E524B3295500DA099F /* SceneDelegate.swift */,
@@ -192,13 +190,6 @@
 				2C8C932D24B3880A00DA099F /* Network.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		2C8C931424B3296500DA099F /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		2C8C931524B3296F00DA099F /* List */ = {
@@ -269,13 +260,6 @@
 				2C8C932524B32A1100DA099F /* ListDetailModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		2C8C932324B329F700DA099F /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		2C8C932424B329FE00DA099F /* Extensions */ = {
