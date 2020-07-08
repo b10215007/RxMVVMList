@@ -14,6 +14,7 @@ class ListUserTableViewCell: UITableViewCell {
     private lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 30
+        imageView.clipsToBounds = true
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -29,8 +30,10 @@ class ListUserTableViewCell: UITableViewCell {
     private lazy var typeLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
+        label.textAlignment = .center
         label.layer.cornerRadius = 8
         label.backgroundColor = .systemBlue
+        label.clipsToBounds = true
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -67,7 +70,8 @@ class ListUserTableViewCell: UITableViewCell {
             nameLabel.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
             
             typeLabel.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor),
-            typeLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: 8)
+            typeLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: 8),
+            typeLabel.widthAnchor.constraint(equalToConstant: 72)
         ])
     }
 }

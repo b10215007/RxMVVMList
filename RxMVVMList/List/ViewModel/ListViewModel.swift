@@ -44,7 +44,7 @@ extension UserRouter: RouterType {
     }
 }
 
-class ListViewModel {
+final class ListViewModel {
     
     let service = NetworkManager<UserRouter>()
     

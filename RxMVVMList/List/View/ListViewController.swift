@@ -56,5 +56,13 @@ class ListViewController: UIViewController {
                 cell.setup(model)
                 return cell
         }.disposed(by: disposeBag)
+        
+        self.tableView.rx
+            .modelSelected(ListUserModel.self)
+            .subscribeOn(MainScheduler.instance)
+            .subscribe(onNext: {
+                let vc = ListDetailViewController(model: $0)
+                self.present(vc, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
     }
 }

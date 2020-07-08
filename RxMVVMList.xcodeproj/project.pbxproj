@@ -18,7 +18,6 @@
 		2C8C930624B3295700DA099F /* RxMVVMListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C930524B3295700DA099F /* RxMVVMListUITests.swift */; };
 		2C8C931724B3297C00DA099F /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C931624B3297C00DA099F /* ListViewModel.swift */; };
 		2C8C931924B3298300DA099F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C931824B3298300DA099F /* ListViewController.swift */; };
-		2C8C931E24B329A300DA099F /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C931D24B329A300DA099F /* ListModel.swift */; };
 		2C8C932624B32A1100DA099F /* ListDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C932524B32A1100DA099F /* ListDetailModel.swift */; };
 		2C8C932824B32A2000DA099F /* ListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C932724B32A2000DA099F /* ListDetailViewModel.swift */; };
 		2C8C932A24B32A2B00DA099F /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C932924B32A2B00DA099F /* ListDetailViewController.swift */; };
@@ -29,6 +28,7 @@
 		2C8C933524B41E9D00DA099F /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C933424B41E9D00DA099F /* UIView + Extensions.swift */; };
 		2C8C933724B41ECD00DA099F /* ListUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C933624B41ECD00DA099F /* ListUserModel.swift */; };
 		2C8C933924B4271100DA099F /* UIImage + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C933824B4271100DA099F /* UIImage + Extensions.swift */; };
+		2C8C933C24B450E800DA099F /* ListDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C933B24B450E700DA099F /* ListDetailTableViewCell.swift */; };
 		9F9F02DAEEB3C9B4A52BC464 /* Pods_RxMVVMListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC7A32BA8828FEB1B4871D2 /* Pods_RxMVVMListUITests.framework */; };
 		DE657952D522EF9C159DC69F /* Pods_RxMVVMList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E090DAF34A7D11AE02AF189 /* Pods_RxMVVMList.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +69,6 @@
 		2C8C930724B3295700DA099F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8C931624B3297C00DA099F /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		2C8C931824B3298300DA099F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		2C8C931D24B329A300DA099F /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		2C8C932524B32A1100DA099F /* ListDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailModel.swift; sourceTree = "<group>"; };
 		2C8C932724B32A2000DA099F /* ListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewModel.swift; sourceTree = "<group>"; };
 		2C8C932924B32A2B00DA099F /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		2C8C933424B41E9D00DA099F /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		2C8C933624B41ECD00DA099F /* ListUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserModel.swift; sourceTree = "<group>"; };
 		2C8C933824B4271100DA099F /* UIImage + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extensions.swift"; sourceTree = "<group>"; };
+		2C8C933B24B450E700DA099F /* ListDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailTableViewCell.swift; sourceTree = "<group>"; };
 		79D2FB28FCD14F2775644B26 /* Pods_RxMVVMListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC7A32BA8828FEB1B4871D2 /* Pods_RxMVVMListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC1BB3FA9D4E5AAADDBAA65 /* Pods-RxMVVMListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMListUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVMListUITests/Pods-RxMVVMListUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,7 +214,6 @@
 		2C8C931A24B3298800DA099F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C8C931D24B329A300DA099F /* ListModel.swift */,
 				2C8C933624B41ECD00DA099F /* ListUserModel.swift */,
 			);
 			path = Model;
@@ -241,8 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				2C8C932224B329E100DA099F /* Model */,
-				2C8C932124B329DA00DA099F /* ViewModel */,
 				2C8C932024B329D400DA099F /* View */,
+				2C8C932124B329DA00DA099F /* ViewModel */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -250,6 +249,7 @@
 		2C8C932024B329D400DA099F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C8C933A24B4316D00DA099F /* Cell */,
 				2C8C932924B32A2B00DA099F /* ListDetailViewController.swift */,
 			);
 			path = View;
@@ -294,6 +294,14 @@
 				2C8C933024B3927300DA099F /* ListUserTableViewCell.swift */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		2C8C933A24B4316D00DA099F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C933B24B450E700DA099F /* ListDetailTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		4F4533C7AB1FC93E398CF018 /* Pods */ = {
@@ -550,8 +558,8 @@
 				2C8C931724B3297C00DA099F /* ListViewModel.swift in Sources */,
 				2C8C932624B32A1100DA099F /* ListDetailModel.swift in Sources */,
 				2C8C933724B41ECD00DA099F /* ListUserModel.swift in Sources */,
+				2C8C933C24B450E800DA099F /* ListDetailTableViewCell.swift in Sources */,
 				2C8C932E24B3880A00DA099F /* Network.swift in Sources */,
-				2C8C931E24B329A300DA099F /* ListModel.swift in Sources */,
 				2C8C931924B3298300DA099F /* ListViewController.swift in Sources */,
 				2C8C932A24B32A2B00DA099F /* ListDetailViewController.swift in Sources */,
 				2C8C92E824B3295500DA099F /* ContentView.swift in Sources */,
